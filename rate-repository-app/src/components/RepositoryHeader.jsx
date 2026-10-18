@@ -1,5 +1,5 @@
 import { View, Image, StyleSheet } from "react-native";
-import { Text } from "./Text";
+import Text from "./Text";
 import theme from "../theme";
 
 const styles = StyleSheet.create({
@@ -36,7 +36,7 @@ const RepositoryHeader = ({ item }) => {
   return (
     <View style={styles.header}>
       <Image style={styles.avatar} source={{ uri: item.ownerAvatarUrl }} />
-      <View styles={styles.repositoryInfo}>
+      <View style={styles.repositoryInfo}>
         <Text style={styles.fullName}>{item.fullName}</Text>
         <Text style={styles.description}>{item.description}</Text>
         <Text style={styles.language}>{item.language}</Text>
