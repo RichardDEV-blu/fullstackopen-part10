@@ -3,6 +3,7 @@ import { AUTHENTICATE } from "../graphql/queries";
 
 const useSignIn = () => {
   const [mutate, result] = useMutation(AUTHENTICATE);
+
   const signIn = async ({ username, password }) => {
     const response = mutate({
       variables: {
